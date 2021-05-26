@@ -1,7 +1,7 @@
 # AskBizz
 
   <h3 align="center">AskBizz</h3>
-  <h4> align="center">Design Documen</h4>
+  # Design Document
  <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
