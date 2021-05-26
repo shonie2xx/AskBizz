@@ -1,6 +1,6 @@
 # AskBizz
 
-  <h3 align="center">Design Document</h3>
+  
  <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
@@ -18,39 +18,37 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This is the front-end part of the web application Hobbybook.
-I did a tinder-clone for my first full-stack web application. I am not actual constant user of dating websites but the idea behind it, how it brings together is great. The application is based on common interests between people and the possibility for them to match between each other.
-My inspiration of doing a tinder clone is that I found the complexivity very interesting and suitable for the project assignment given from Fontys University. 
+MVP - business forum application. Application provides the user to ask and answer questions. 
 
-### Project assignment
-* Authorization, authentication
-* 2 kind of user roles. ADMIN/USER.
-* CRUD operations.
+### Target demographic
+* Established in her business career Patricia.
+* Young business owner Simon.
 
 ### Tools used
-
-* ReactJS
-* HTML
-* CSS
-
-### Agile
-
-* Scrum
-
+* Swift
+* Firebase
 
 <!-- USAGE EXAMPLES -->
 ## App journey
 
 * Login/Register
-* User cards(like,dislike,view hobbies)
-* Profile page
-* If admin is logged in he has rights to CRUD users.
+* Categories
+* Question cards sorted by category selected. 
+* Answer page for any question.
 
+## Prototype
+https://www.figma.com/file/hMsuhqSYNOLQ5mghu0hKjp/OfficialPrototype?node-id=0%3A1
+
+## Screenshots
+Screenshot 2021-05-26 at 15.54.00![image](https://user-images.githubusercontent.com/56325705/119672116-9e691700-be3a-11eb-9a61-28c35c624e70.png)
+Screenshot 2021-05-25 at 14.55.24![image](https://user-images.githubusercontent.com/56325705/119671426-0a974b00-be3a-11eb-8cee-5bfa36c82fe5.png)
+Screenshot 2021-05-26 at 15.51.13![image](https://user-images.githubusercontent.com/56325705/119671662-3ca8ad00-be3a-11eb-8f5f-a4063d9eaad5.png)
+Screenshot 2021-05-26 at 15.51.13![image](https://user-images.githubusercontent.com/56325705/119671785-55b15e00-be3a-11eb-895f-a0c8d0bdb1bc.png)
 
 <!-- LICENSE -->
 ## License
 
-Distributed by me.
+Distributed by me and one more person. 
 
 
 <!-- CONTACT -->
