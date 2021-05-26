@@ -1,6 +1,5 @@
 # AskBizz
 
-  <h3 align="center">AskBizz</h3>
   <h3 align="center">Design Document</h3>
  <!-- TABLE OF CONTENTS -->
 <details open="open">
