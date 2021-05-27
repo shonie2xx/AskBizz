@@ -20,7 +20,7 @@ class AnswerViewModel: ObservableObject{
     
     func fetchData(qDocId: String)
     {
-        db.collection("questionFinal").document(qDocId).collection("answers").addSnapshotListener{(querySnapshot, Error) in
+        db.collection("questions").document(qDocId).collection("answers").addSnapshotListener{(querySnapshot, Error) in
             guard let documents = querySnapshot?.documents else {
                 print("No documents")
                 return
@@ -40,7 +40,7 @@ class AnswerViewModel: ObservableObject{
     
     func addAnswer(qDocId:String, answer: Answer)
     {
-        db.collection("questionFinal").document(qDocId).collection("answers")
+        db.collection("questions").document(qDocId).collection("answers")
             .addDocument(data: [
                 "userId": answer.userId,
                 "date": answer.date,

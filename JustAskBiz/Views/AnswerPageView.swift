@@ -14,62 +14,66 @@ struct AnswerPageView: View {
     
     @ObservedObject var aViewModel = AnswerViewModel()
     
+    @ObservedObject var pViewModel = ProfileViewModel()
     var question : Question
     
     var body: some View {
         VStack { // VStack for all elements on page
             ScrollView{ // ScrollView containing questioninfo and answer stack view (Answer array -> view)
-                        // But NOT AnswerPostView because it should stay at the bottom at all times
+                // But NOT AnswerPostView because it should stay at the bottom at all times
                 
-                QuestionInfoView(question: question)
-                AnswerStackView(answerArray: aViewModel.getAnswers(qDocId: question.documentId))
+                QuestionInfoView(question: question,user: pViewModel.profile)
+                AnswerStackView(answerArray: aViewModel.answers)
                 
             }
             //TEST THIS
-            AnswerPostView(questionID : question.documentId) //8yUKyA6oZj3NqDagWlw4
+            AnswerPostView(questionID : question.documentId)
             
         }.navigationBarTitle("Question")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear{
+            aViewModel.fetchData(qDocId: question.documentId)
+            pViewModel.fetchData(userId: question.userId)
         }
         
     }
 }
 
 struct QuestionInfoView: View {
-    @ObservedObject var askedViewModel = ProfileViewModel()
     var question : Question
+    var user: User
+    @ObservedObject private var askedViewModel = ProfileViewModel()
+    
     var body : some View {
-        VStack{
-            Text(self.question.bodyText)
-            TagView(tags : self.question.tags)
-            HStack(alignment: .top){
-                VStack{
-                    Text("Asked by:")
-                    HStack{
-                        Image(systemName: "person.fill.questionmark")
-                        VStack{
-                            Text("\(askedViewModel.profile.name)")
-                            Text("\(askedViewModel.profile.title)")
-                            Text("\(askedViewModel.profile.followers)")
+        ZStack{
+            VStack{
+                Text(self.question.bodyText)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+                TagView(tags : self.question.tags)
+                HStack(alignment: .top){
+                    VStack{
+                        Text("Asked by:")
+                        HStack{
+                            Image(systemName: "person.fill.questionmark")
+                            VStack(alignment: .leading){
+                                Text("\(user.name)").bold()
+                                Text("\(user.title)")
+//                                Text("\(user.followers)")
+                            }
                         }
                     }
+                    Spacer()
+                    VStack(spacing: 5){
+                        Text("Total likes: ")
+                        Image(systemName : "heart")
+                        Text("\(question.totalAnswerLikes)")
+                    }
                 }
-                Spacer()
-                VStack(spacing: 5){
-                    Text("Total likes: ")
-                    Image(systemName : "heart")
-                    Text("\(question.totalAnswerLikes)")
-                }
-            }
-            Text("\(question.date, formatter: realDateFormatter())")
-            Divider()
-        }.padding()
-        .onAppear{
-            //Very powerful line of code
-            self.askedViewModel.fetchData(userId: question.userId)
+                Text("\(question.date, formatter: realDateFormatter())")
+                Divider()
+            }.padding()
         }
-        
     }
 }
 
@@ -77,26 +81,25 @@ struct TagView: View {
     var tags : [String]
     var body : some View {
         ScrollView(.horizontal){
-        HStack{
-            ForEach(tags, id: \.self){ item in
-                Text(item)
-                    .font(.caption)
-                    .padding(5)
-                    .background(Color.white)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(Color.black, lineWidth: 1)
-                    )
+            HStack{
+                ForEach(tags, id: \.self){ item in
+                    Text(item)
+                        .font(.caption)
+                        .padding(5)
+                        .background(Color.white)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(Color.black, lineWidth: 1)
+                        )
+                }
             }
-        }
         }.padding(.horizontal, 10)
     }
 }
 
 struct AnswerStackView : View {
-     var answerArray = [Answer]()
+    var answerArray = [Answer]()
     
-//    var qDocId : String
     
     var body: some View {
         VStack{
@@ -109,9 +112,10 @@ struct AnswerStackView : View {
 }
 
 struct AnswerCardView: View {
-    @ObservedObject var answeredViewModel = ProfileViewModel()
+    @ObservedObject private var answeredViewModel = ProfileViewModel()
     
     var answer : Answer
+    
     var body : some View {
         ZStack {
             RoundedRectangle(cornerRadius : 15)
@@ -119,10 +123,10 @@ struct AnswerCardView: View {
             VStack{
                 HStack(alignment : .top){
                     Image(systemName : "pencil")
-                    VStack{
-                        Text("\(answeredViewModel.profile.name)")
+                    VStack(alignment:.leading){
+                        Text("\(answeredViewModel.profile.name)").bold()
                         Text("\(answeredViewModel.profile.title)")
-                        Text("\(answeredViewModel.profile.followers)")
+//                        Text("\(answeredViewModel.profile.followers)")
                     }
                     Spacer()
                     VStack (spacing: 10){
@@ -131,13 +135,13 @@ struct AnswerCardView: View {
                             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                                 Image(systemName: "heart.fill")
                             })
-                            Text("\(answer.likes)")
+//                            Text("\(answer.likes)")
                         }
                     }
                     
                 }.padding(5.0)
                 Divider()
-                Text("\(answer.bodyText)")
+                Text("\(answer.bodyText)").multilineTextAlignment(.leading)
                 Spacer()
                 
             }
@@ -154,7 +158,7 @@ struct AnswerCardView: View {
 
 struct AnswerPostView : View {
     
-//    var postViewModel : QuestionViewModel
+    //    var postViewModel : QuestionViewModel
     @ObservedObject var viewModel = AnswerViewModel()
     @State private var answerMessage = ""
     
@@ -197,6 +201,6 @@ struct AnswerPageView_Previews: PreviewProvider { // Hardcoded data to show in p
                                  
                                  documentId:"qweqewewqdsasqd"
                         ))
-    
+        
     }
 }

@@ -25,11 +25,11 @@
 		F6B9B67E2658025100702E15 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B9B67D2658025100702E15 /* HomePageView.swift */; };
 		F6C1B0E02659372300A4D394 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C1B0DF2659372300A4D394 /* Question.swift */; };
 		F6C1B0E22659373D00A4D394 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C1B0E12659373D00A4D394 /* User.swift */; };
-		F6C1B0E426593A7400A4D394 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6C1B0E326593A7400A4D394 /* GoogleService-Info.plist */; };
 		FB15F1C5265AAEFD00632FD5 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15F1C4265AAEFD00632FD5 /* ProfileViewModel.swift */; };
 		FB15F1CA265AB7E800632FD5 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15F1C9265AB7E800632FD5 /* ImagePicker.swift */; };
 		FB26BB49265C97DA00C6557D /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26BB48265C97DA00C6557D /* QuestionViewModel.swift */; };
 		FB26BB50265CBEFC00C6557D /* AnswerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26BB4F265CBEFC00C6557D /* AnswerViewModel.swift */; };
+		FB6BA11A265FAF3A00F0160C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB6BA119265FAF3A00F0160C /* GoogleService-Info.plist */; };
 		FBBAA3D026595AFE004A0C4D /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAA3CF26595AFE004A0C4D /* AuthViewModel.swift */; };
 		FBBAA3D426596DD1004A0C4D /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAA3D326596DD1004A0C4D /* Answer.swift */; };
 /* End PBXBuildFile section */
@@ -50,11 +50,11 @@
 		F6B9B67D2658025100702E15 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		F6C1B0DF2659372300A4D394 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		F6C1B0E12659373D00A4D394 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		F6C1B0E326593A7400A4D394 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB15F1C4265AAEFD00632FD5 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		FB15F1C9265AB7E800632FD5 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		FB26BB48265C97DA00C6557D /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
 		FB26BB4F265CBEFC00C6557D /* AnswerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewModel.swift; sourceTree = "<group>"; };
+		FB6BA119265FAF3A00F0160C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FBBAA3CF26595AFE004A0C4D /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		FBBAA3D326596DD1004A0C4D /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,18 +105,10 @@
 				F6C1B0DE2659370D00A4D394 /* Models */,
 				FB45AD852658534F005E944B /* ViewModels */,
 				FB45AD842658531D005E944B /* Views */,
-				F6B9B66B2657CDBC00702E15 /* LogInPageView.swift */,
-				F6B9B67B2657F37800702E15 /* ProfilePageView.swift */,
-				F6B9B67D2658025100702E15 /* HomePageView.swift */,
-				F6A2F088265804A0004EBFD5 /* QuestionsPageView.swift */,
-				F6A2F08A2658051B004EBFD5 /* EditProfilePageView.swift */,
-				F6A2F08C26580634004EBFD5 /* AnswerPageView.swift */,
-				F6A2F08E265806EE004EBFD5 /* SearchPageView.swift */,
-				F6A2F09026580970004EBFD5 /* QuestionAddPageView.swift */,
 				F6B9B6692657CDBC00702E15 /* JustAskBizApp.swift */,
 				F6B9B66D2657CDBE00702E15 /* Assets.xcassets */,
+				FB6BA119265FAF3A00F0160C /* GoogleService-Info.plist */,
 				F6B9B6722657CDBE00702E15 /* Info.plist */,
-				F6C1B0E326593A7400A4D394 /* GoogleService-Info.plist */,
 				F6B9B66F2657CDBE00702E15 /* Preview Content */,
 			);
 			path = JustAskBiz;
@@ -143,6 +135,14 @@
 		FB45AD842658531D005E944B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F6B9B66B2657CDBC00702E15 /* LogInPageView.swift */,
+				F6B9B67B2657F37800702E15 /* ProfilePageView.swift */,
+				F6B9B67D2658025100702E15 /* HomePageView.swift */,
+				F6A2F088265804A0004EBFD5 /* QuestionsPageView.swift */,
+				F6A2F08A2658051B004EBFD5 /* EditProfilePageView.swift */,
+				F6A2F08C26580634004EBFD5 /* AnswerPageView.swift */,
+				F6A2F08E265806EE004EBFD5 /* SearchPageView.swift */,
+				F6A2F09026580970004EBFD5 /* QuestionAddPageView.swift */,
 			);
 			name = Views;
 			path = JustAskBiz/Views;
@@ -234,7 +234,7 @@
 			files = (
 				F6B9B6712657CDBE00702E15 /* Preview Assets.xcassets in Resources */,
 				F6B9B66E2657CDBE00702E15 /* Assets.xcassets in Resources */,
-				F6C1B0E426593A7400A4D394 /* GoogleService-Info.plist in Resources */,
+				FB6BA11A265FAF3A00F0160C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +422,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.daniel.JustAskBiz;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vojd.JustAskBizz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -444,7 +444,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.daniel.JustAskBiz;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vojd.JustAskBizz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -54,7 +54,7 @@ class AuthViewModel: ObservableObject{
         let uuid : String = auth.currentUser?.uid ?? ""
         let user: User = User(email: email, name: name, followers: 0, likes: 0, title: title ,  about: about, industry: "", profileImageUrl: "")
         
-        let docRef  : DocumentReference = db.collection("Users2").document(uuid)
+        let docRef  : DocumentReference = db.collection("users").document(uuid)
         
         do {
             try docRef.setData(from : user) // Save user

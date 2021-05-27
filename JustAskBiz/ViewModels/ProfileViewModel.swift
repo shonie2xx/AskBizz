@@ -21,7 +21,7 @@ class ProfileViewModel: ObservableObject {
             return
         }
         
-        let refDoc = database.collection("Users2").document(userId)
+        let refDoc = database.collection("users").document(userId)
         refDoc.getDocument{ (document, err) in
             let result = Result {
                 
@@ -58,7 +58,7 @@ class ProfileViewModel: ObservableObject {
             return
         }
         print(id)
-        let refDoc = database.collection("Users2").document(id)
+        let refDoc = database.collection("users").document(id)
         
         refDoc.getDocument{ (document, err) in
             let user = Result {

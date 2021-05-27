@@ -75,11 +75,11 @@ struct QuestionsView : View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 60.0, height: 60.0)
                         
-                        VStack {
+                        VStack (alignment:.leading){
                             Text("\(profileViewModel.profile.name)").bold()
                            
                             Text("\(profileViewModel.profile.title)")
-                            Text("\(profileViewModel.profile.followers)")
+//                            Text("\(profileViewModel.profile.followers)")
                         }
                         Spacer()
                         VStack{
