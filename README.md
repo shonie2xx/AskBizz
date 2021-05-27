@@ -40,10 +40,10 @@ MVP - business forum application. Application provides the user to ask and answe
 https://www.figma.com/file/hMsuhqSYNOLQ5mghu0hKjp/OfficialPrototype?node-id=0%3A1
 
 ## Screenshots
-Screenshot 2021-05-26 at 15.54.00![image](https://user-images.githubusercontent.com/56325705/119672116-9e691700-be3a-11eb-9a61-28c35c624e70.png)
-Screenshot 2021-05-25 at 14.55.24![image](https://user-images.githubusercontent.com/56325705/119671426-0a974b00-be3a-11eb-8cee-5bfa36c82fe5.png)
-Screenshot 2021-05-26 at 15.51.13![image](https://user-images.githubusercontent.com/56325705/119671662-3ca8ad00-be3a-11eb-8f5f-a4063d9eaad5.png)
-Screenshot 2021-05-26 at 15.51.13![image](https://user-images.githubusercontent.com/56325705/119671785-55b15e00-be3a-11eb-895f-a0c8d0bdb1bc.png)
+Sign in/up![image](https://user-images.githubusercontent.com/56325705/119672116-9e691700-be3a-11eb-9a61-28c35c624e70.png)
+Categories![image](https://user-images.githubusercontent.com/56325705/119671426-0a974b00-be3a-11eb-8cee-5bfa36c82fe5.png)
+Questions in one of the categories(Leadership)![image](https://user-images.githubusercontent.com/56325705/119830085-33801480-befc-11eb-8d22-8dadbc88956b.png)
+Answers in one of the questions![image](https://user-images.githubusercontent.com/56325705/119830192-4f83b600-befc-11eb-8a7e-8cac37c6476b.png)
 
 <!-- LICENSE -->
 ## License
