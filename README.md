@@ -49,7 +49,7 @@ Answers in one of the questions![image](https://user-images.githubusercontent.co
 <!-- LICENSE -->
 ## License
 
-Distributed by me and one more person. 
+Distributed by me. 
 
 
 <!-- CONTACT -->
